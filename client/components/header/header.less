@@ -1,0 +1,44 @@
+:local(.nav) {
+  float: left;
+  margin-top: 30px;
+
+  li {
+    list-style: none;
+    float: left;
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      font-size: 18px;
+      color: #8d8c8c;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
+}
+:local(.active){
+  padding-bottom: 10px;
+  border-bottom: 1px solid red;
+}
+
+.header {
+  background: #fff;
+  height: 75px;
+  box-shadow: 0 0 5px #cdcdcd;
+  margin-top: 105px;
+  margin-bottom: 80px;
+
+  &__wrapper {
+    width: 980px;
+    margin: 0 auto;
+  }
+  &__logo {
+    margin-right: 70px;
+    float: left;
+    display: block;
+    margin-top: -23px;
+  }
+}

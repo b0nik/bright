@@ -1,0 +1,127 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+//reset styles
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+//=================== main styles
+
+//==================== fonts
+
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("./fonts/MyriadProRegular/MyriadProRegular.eot");
+  src: url("./fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+  url("./fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+  url("./fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "MyriadProBold"; */
+@font-face {
+  font-family: "MyriadProBold";
+  src: url("./fonts/MyriadProBold/MyriadProBold.eot");
+  src: url("./fonts/MyriadProBold/MyriadProBold.eot?#iefix")format("embedded-opentype"),
+  url("./fonts/MyriadProBold/MyriadProBold.woff") format("woff"),
+  url("./fonts/MyriadProBold/MyriadProBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "MyriadProItalic"; */
+@font-face {
+  font-family: "MyriadProItalic";
+  src: url("./fonts/MyriadProItalic/MyriadProItalic.eot");
+  src: url("./fonts/MyriadProItalic/MyriadProItalic.eot?#iefix")format("embedded-opentype"),
+  url("./fonts/MyriadProItalic/MyriadProItalic.woff") format("woff"),
+  url("./fonts/MyriadProItalic/MyriadProItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "MyriadProSemiBold"; */
+@font-face {
+  font-family: "MyriadProSemiBold";
+  src: url("./fonts/MyriadProSemiBold/MyriadProSemiBold.eot");
+  src: url("./fonts/MyriadProSemiBold/MyriadProSemiBold.eot?#iefix")format("embedded-opentype"),
+  url("./fonts/MyriadProSemiBold/MyriadProSemiBold.woff") format("woff"),
+  url("./fonts/MyriadProSemiBold/MyriadProSemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "MyriadProBoldItalic"; */
+@font-face {
+  font-family: "MyriadProBoldItalic";
+  src: url("./fonts/MyriadProBoldItalic/MyriadProBoldItalic.eot");
+  src: url("./fonts/MyriadProBoldItalic/MyriadProBoldItalic.eot?#iefix")format("embedded-opentype"),
+  url("./fonts/MyriadProBoldItalic/MyriadProBoldItalic.woff") format("woff"),
+  url("./fonts/MyriadProBoldItalic/MyriadProBoldItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "MyriadProSemiBoldItalic"; */
+@font-face {
+  font-family: "MyriadProSemiBoldItalic";
+  src: url("./fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.eot");
+  src: url("./fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.eot?#iefix")format("embedded-opentype"),
+  url("./fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.woff") format("woff"),
+  url("./fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+
+/* For modern browsers */
+.clerfix:before,
+.clerfix:after {
+  content: "";
+  display: table;
+}
+.clerfix:after {
+  clear: both;
+}
