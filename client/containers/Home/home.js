@@ -3,46 +3,43 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import * as pageActions from './actions'
 import 'whatwg-fetch';
-
+import Helmet from "react-helmet";
 
 function mapStateToProps(state) {
     return {
-        title: state.home.title
+        pages: state.pages
     }
 }
-function mapDispatchToProps(dispatch) {
-    return {
-        homeActions: bindActionCreators(pageActions, dispatch)
-    }
-}
+//
+// function mapDispatchToProps(dispatch) {
+//     return {
+//         homeActions: bindActionCreators(pageActions, dispatch)
+//     }
+// }
 
 class Home extends Component {
-    constructor() {
-        super();
-        this.state = {
-            loaded: false
-        }
-    }
 
+    findPage(){
+        return this.props.pages.filter(item=>{
+            if(`${item.link}`==='/') return item
+        })
+    }
 
     render() {
         const styles = require('./styles.less');
-        let result;
-        if (this.state.loaded) {
-            result = (
-                <div className={styles.wrap}><h1 className='title'>{this.props.title}</h1></div>
-            )
-        } else {
-            result = (
-                <p>loading...</p>
+        const page=this.findPage()[0];
+            return (
+                <div>
+                    <Helmet
+                        title={page.name}
+                    />
+                    <div className={styles.wrap}><h1 dangerouslySetInnerHTML={{__html: page.title}} className='title'/></div>
+                </div>
             )
         }
-
-        return result;
-    }
 }
 
 export default connect(
     mapStateToProps,
-    mapDispatchToProps
+    // mapDispatchToProps
 )(Home);

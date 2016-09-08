@@ -2,10 +2,10 @@ api.express = require('express');
 api.path = require('path');
 api.favicon = require('serve-favicon');
 api.logger = require('morgan');
+api.fs = require('fs');
 api.mongoose = require('./libs/mongoose');
 api.cookieParser = require('cookie-parser');
 api.bodyParser = require('body-parser');
-const router=require('./routes/index');
 
 //development
 const webpack = require('webpack');
@@ -22,9 +22,13 @@ app.use(api.logger('dev'));
 app.use(api.bodyParser.json());
 app.use(api.bodyParser.urlencoded({extended: false}));
 app.use(api.cookieParser());
-app.use(router);
 
 app.use(api.express.static(api.path.join(__dirname, './../../build')));
+
+api.fs.readdirSync(api.path.join(__dirname,'./routes')).forEach(file=>{
+    var name = file.substr(0, file.indexOf('.'));
+    require(api.path.join(__dirname,'./routes/') + name)(app);
+});
 
 
 if (app.get('env') === 'webpack') {

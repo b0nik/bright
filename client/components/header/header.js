@@ -3,7 +3,8 @@ import { Link } from 'react-router'
 import {bindActionCreators} from 'redux'
 import * as actions from './actions'
 import {connect} from 'react-redux'
-import Nav from '../blocks/navigator'
+import Nav from '../blocks/navigator/navigator'
+import Social from '../social/social'
 
 function getProps(state) {
     return{
@@ -24,7 +25,7 @@ class Header extends Component{
                         <Nav {...this.props} data={this.props.links} className={styles.nav} activeClass={styles.active}/>:
                         <p>loading...</p>
                     }
-
+                    <Social className="social"/>
                 </div>
             </div>
         )

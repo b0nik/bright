@@ -1,11 +1,11 @@
-const Page = require('../models/page');
-const page = new Page();
+const router = api.express.Router();
+const Social = require('../models/social');
+// });
 
-
-module.exports = function (app) {
-    app.get('/pages', (req, res, next)=> {
+module.exports=function (app) {
+    app.get('/social', (req, res, next)=> {
         if (!!req.headers['x-requested-with']) {
-            Page.find({})
+            Social.find({})
                 .then(
                     data=>{res.end(JSON.stringify(data))},
                     err=>{

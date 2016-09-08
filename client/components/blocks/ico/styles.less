@@ -1,0 +1,34 @@
+.stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+  background-position: @x @y;
+  width: @width;
+  height: @height;
+}
+.sprite {
+  background-image: url(spritesheet.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+
+  &.sprite-behance {
+    .stitches-sprite(-1px, -1px, 26px, 26px);
+  }
+
+  &.sprite-dribbble {
+    .stitches-sprite(-29px, -1px, 26px, 26px);
+  }
+
+  &.sprite-facebook {
+    .stitches-sprite(-1px, -29px, 27px, 26px);
+  }
+
+  &.sprite-google {
+    .stitches-sprite(-30px, -29px, 26px, 26px);
+  }
+
+  &.sprite-rss {
+    .stitches-sprite(-57px, -1px, 26px, 26px);
+  }
+
+  &.sprite-twitter {
+    .stitches-sprite(-58px, -29px, 26px, 26px);
+  }
+}

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
-
+import Helmet from "react-helmet";
 
 function mapStateToProps(state) {
     return {
@@ -17,7 +17,12 @@ class Default extends Component{
     render(){
         const page=this.findPage()[0];
         return(
-            <h1>{page.title}</h1>
+            <div>
+                <Helmet
+                    title={page.name}
+                />
+                <h1>{page.title}</h1>
+             </div>
         )
     }
 }
