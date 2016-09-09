@@ -5,6 +5,8 @@ import * as pageActions from './actions'
 import 'whatwg-fetch';
 import Helmet from "react-helmet";
 
+import Product from './../../components/product/product'
+
 function mapStateToProps(state) {
     return {
         pages: state.pages
@@ -34,6 +36,7 @@ class Home extends Component {
                         title={page.name}
                     />
                     <div className={styles.wrap}><h1 dangerouslySetInnerHTML={{__html: page.title}} className='title'/></div>
+                    <Product/>
                 </div>
             )
         }

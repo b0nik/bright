@@ -8,8 +8,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: [
-        path.join(__dirname,'/client/main.less'),
-        path.join(__dirname,'/client/styles/index.js')
+        path.join(__dirname,'/client/styles/main.less'),
+        path.join(__dirname,'/client/index.js')
     ],
     output: {
         path: path.join(__dirname, '/build/'),
@@ -67,7 +67,7 @@ module.exports = {
                 }
             },
             {
-                test:/\.(png|jpg|svf|ttf|eot|woff|woff2)$/,
+                test:/\.(png|jpg|svf|ttf|eot|woff|woff2|ico)$/,
                 exclude:/\/node_modules\//,
                 loader:'file?name=[path][name].[ext]&limit=4096'
             },
@@ -78,7 +78,7 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                loader: ExtractTextPlugin.extract('styles', 'css?minimize!less')
+                loader: ExtractTextPlugin.extract('style', 'css?minimize!less')
             }
         ]
     },

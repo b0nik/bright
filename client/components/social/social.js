@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import * as actions from './actions'
 import Ico from './../blocks/ico/ico'
+import {connect} from 'react-redux'
 
 function mapStateToProps(state) {
     return {

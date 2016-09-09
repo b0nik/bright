@@ -1,6 +1,4 @@
-const router = api.express.Router();
 const Social = require('../models/social');
-// });
 
 module.exports=function (app) {
     app.get('/social', (req, res, next)=> {
