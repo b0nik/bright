@@ -5,7 +5,7 @@ export default class Item extends Component{
         return(
             <div className={this.props.className}>
                 <div className="item-general-information">
-                    <span className="item-name">{this.props.item.title}</span>
+                    <h5 className="item-name">{this.props.item.title}</h5>
                     <span className="item-category">{this.props.item.sub_title}</span>
                 </div>
                 <div className="item-content">
