@@ -115,7 +115,7 @@ class Product extends Component {
         e.stopPropagation()
     }
 
-    filterShowPaginstion() {
+    filterShowPagination() {
         let temp = this.state.range * this.state.count;
         return this.props.products.slice(temp, temp + this.state.range)
     }
@@ -124,7 +124,7 @@ class Product extends Component {
         const styles = require("./styles.less");
         let result;
         if (this.props.loaded) {
-            result = this.filterShowPaginstion().map((item, i)=> {
+            result = this.filterShowPagination().map((item, i)=> {
                 return (
                     <Item key={i} className={styles.product} item={item}/>
                 )

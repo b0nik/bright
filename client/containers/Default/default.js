@@ -17,7 +17,7 @@ class Default extends Component{
     render(){
         const page=this.findPage()[0];
         return(
-            <div>
+            <div className="content">
                 <Helmet
                     title={page.name}
                 />

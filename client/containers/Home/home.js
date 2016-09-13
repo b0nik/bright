@@ -31,7 +31,7 @@ class Home extends Component {
         const styles = require('./styles.less');
         const page=this.findPage()[0];
             return (
-                <div>
+                <div className="content">
                     <Helmet
                         title={page.name}
                     />

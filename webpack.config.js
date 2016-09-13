@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin=require('extract-text-webpack-plugin');
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: [
@@ -54,6 +55,11 @@ module.exports = {
         ]
     },
     plugins:[
+        new CleanWebpackPlugin(['build'], {
+            verbose: true,
+            dry: false,
+            exclude:['media']
+        }),
         new ExtractTextPlugin('styles.css'),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development')
