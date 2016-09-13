@@ -19,7 +19,6 @@ var app = api.express();
 
 
 app.use(api.logger('dev'));
-app.use(api.favicon(api.path.join(__dirname, '../../build/client/containers/App/img/favicon.ico')));
 app.use(api.bodyParser.json());
 app.use(api.bodyParser.urlencoded({extended: false}));
 app.use(api.cookieParser());
@@ -33,6 +32,7 @@ api.fs.readdirSync(api.path.join(__dirname,'./routes')).forEach(file=>{
 
 
 if (app.get('env') === 'webpack') {
+    app.use(api.favicon(api.path.join(__dirname, '../../client/containers/App/img/favicon.ico')));
     const compiler = webpack(webpackConf);
     const middleware = webpackMiddleware(compiler, {
         publicPath: webpackConf.output.publicPath,
@@ -53,6 +53,7 @@ if (app.get('env') === 'webpack') {
         res.end();
     });
 } else {
+    app.use(api.favicon(api.path.join(__dirname, '../../build/client/containers/App/img/favicon.ico')));
     app.get('*', function response(req, res) {
         res.sendFile(api.path.join(__dirname, './../../build/index.html'));
     });

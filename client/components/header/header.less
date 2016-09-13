@@ -1,32 +1,38 @@
+@headerHeight:75px;
+
 :local(.nav) {
   float: left;
-  margin-top: 30px;
 
   li {
     list-style: none;
     float: left;
-    margin-right: 40px;
+    height: @headerHeight;
+    line-height: @headerHeight;
+    .wrap-text{
 
-    &:last-child {
-      margin-right: 0;
     }
+
     a {
       font-size: 18px;
       color: #8d8c8c;
       text-transform: uppercase;
       text-decoration: none;
       display: inline-block;
+      padding: 0 20px;
+      height: 100%;
     }
   }
 }
 :local(.active){
-  padding-bottom: 10px;
-  border-bottom: 1px solid red;
+  .wrap-text {
+    padding-bottom: 10px;
+    border-bottom: 1px solid red;
+  }
 }
 
 .header {
   background: #fff;
-  height: 75px;
+  height: @headerHeight;
   box-shadow: 0 0 5px #cdcdcd;
   margin-top: 105px;
   margin-bottom: 80px;

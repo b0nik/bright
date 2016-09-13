@@ -7,7 +7,7 @@ export default class Nav extends Component {
         const template=this.props.data.map((item,i)=>{
             let link=`/${item.link}`;
             if(item.link==='/'){link='/'}
-            return  <li key={i}><Link activeClassName={this.props.activeClass} to={link}>{item.name}</Link></li>
+            return  <li key={i}><Link activeClassName={this.props.activeClass} to={link}><span className="wrap-text">{item.name}</span></Link></li>
         });
         return(
             <nav className={this.props.className}>

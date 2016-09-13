@@ -25,7 +25,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['build'], {
             verbose: true,
-            dry: false
+            dry: false,
+            exclude:['media']
         }),
         new webpack.optimize.OccurenceOrderPlugin(),
         new ExtractTextPlugin('styles.css'),

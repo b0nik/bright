@@ -3,10 +3,10 @@
   width: @width;
   height: @height;
 }
+
 .sprite {
-  background-image: url(spritesheet.png);
-  background-repeat: no-repeat;
-  display: inline-block;
+  background-image: url(./spritesheet.png);    background-repeat: no-repeat;
+  display: block;
 
   &.sprite-behance {
     .stitches-sprite(-1px, -1px, 26px, 26px);
@@ -17,18 +17,34 @@
   }
 
   &.sprite-facebook {
-    .stitches-sprite(-1px, -29px, 27px, 26px);
+    .stitches-sprite(-57px, -1px, 27px, 26px);
   }
 
   &.sprite-google {
-    .stitches-sprite(-30px, -29px, 26px, 26px);
+    .stitches-sprite(-1px, -29px, 26px, 26px);
+  }
+
+  &.sprite-pgn-back {
+    .stitches-sprite(-29px, -29px, 22px, 24px);
+  }
+
+  &.sprite-pgn-back-more {
+    .stitches-sprite(-53px, -29px, 22px, 24px);
+  }
+
+  &.sprite-pgn-next {
+    .stitches-sprite(-29px, -55px, 22px, 24px);
+  }
+
+  &.sprite-pgn-next-more {
+    .stitches-sprite(-53px, -55px, 22px, 24px);
   }
 
   &.sprite-rss {
-    .stitches-sprite(-57px, -1px, 26px, 26px);
+    .stitches-sprite(-86px, -1px, 25px, 26px);
   }
 
   &.sprite-twitter {
-    .stitches-sprite(-58px, -29px, 26px, 26px);
+    .stitches-sprite(-77px, -29px, 26px, 26px);
   }
 }

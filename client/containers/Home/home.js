@@ -35,13 +35,15 @@ class Home extends Component {
                     <Helmet
                         title={page.name}
                     />
-                    <div className={styles.wrap}><h1 dangerouslySetInnerHTML={{__html: page.title}} className='title'/></div>
-                    <Product/>
+                    <h1 dangerouslySetInnerHTML={{__html: page.title}} className='title'/>
+                    <Product
+                        range={12}
+                        count={11}
+                    />
                 </div>
             )
         }
 }
-
 export default connect(
     mapStateToProps,
     // mapDispatchToProps

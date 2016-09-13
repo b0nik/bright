@@ -7,8 +7,13 @@ module.exports = function (app) {
         // asinc save in db
 
         // let resourse=[];
-        // for(let k=0; k<40; k++){
-        //     resourse.push(new Product({title:`title${k+1}`,sub_title:`sub_title${k+1}`}))
+        // for(let k=0; k<160; k++){
+        //     if(k%2){
+        //         resourse.push(new Product({title:`title${k+1}`,sub_title:`sub_title${k+1}`}))
+        //     }else {
+        //         resourse.push(new Product({title:`title${k+1}`,sub_title:`sub_title${k+1}`,src:"technics1.jpg"}))
+        //     }
+        //
         // }
         // new Promise((resolve,reject)=>{
         //     let done=[]
